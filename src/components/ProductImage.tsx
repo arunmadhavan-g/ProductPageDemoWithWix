@@ -1,4 +1,4 @@
-import React, {useState} from "react"
+import React, {useEffect, useState} from "react"
 import {Col, Image, Row} from "wix-style-react";
 
 import {ImageThumbs} from "./ImageThumbs";
@@ -9,6 +9,9 @@ export interface ProductImageProps {
 
 export const ProductImage: React.FC<ProductImageProps> = ({images}: ProductImageProps) => {
     const [currentImage, setCurrentImage] = useState(images[0]);
+    useEffect(() => {
+        setCurrentImage(images[0]);
+    }, [images])
     return (
         <Row>
             <Col span={3}>

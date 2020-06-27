@@ -9,7 +9,7 @@ import {Synopsis} from "./Synopsis";
 import {DetailedDescription} from "./DetailedDescription";
 import {Specification} from "./Specification";
 import {useDispatch, useSelector} from "react-redux";
-import {changeOptionType} from "../actions";
+import {changeOptionType, addToCart} from "../actions";
 
 export interface ProductDetailsProps {
 }
@@ -25,7 +25,7 @@ export const ProductDetails: React.FC<ProductDetailsProps> = () => {
             <Row>
                 <Col span={6}>
                     <ProductImage images={variantDetails.images}/>
-                    <ButtonsContainer/>
+                    <ButtonsContainer addToCart={() => dispatch(addToCart())}/>
                 </Col>
                 <Col span={6}>
                     <div style={{height: "100%"}}>
