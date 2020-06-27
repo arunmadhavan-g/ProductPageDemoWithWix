@@ -1,19 +1,14 @@
-# Stylable App
+# Product Details - Demo App using Wix components
 
-[Stylable](https://github.com/wix/stylable)-powered application. Generated using `create-stylable-app`.
+Check out the [Demo](https://arunmadhavan-g.github.io/ProductPageDemoWithWix/)
 
-## Development
+This is a demo app that uses the [Wix components](https://github.com/wix/wix-style-react).
+The project also uses *Redux* for state handling
 
-The following scripts are available:
+Points to remember while trying the Demo
 
-`npm run build` - Build the application in production mode into a folder named `dist`. This folder can be served using any HTTP server. Uses [webpack](https://github.com/webpack/webpack).
+1. The add the cart would just show the increase in cart count
+2. The buy now does not work
+3. For getting an "available" state for pincode lookup use the pin `600004`
 
-`npm run serve` - Statically serve the `dist` folder. Uses [serve](https://github.com/zeit/serve).
-
-`npm start` - Starts the application in **development** mode (and opens the web browser). Uses [webpack-dev-server](https://github.com/webpack/webpack-dev-server).
-
-`npm run clean` - Delete the `dist` folder. Uses [rimraf](https://github.com/isaacs/rimraf).
-
-`npm run typecheck` - Verify syntactic/semantic correctness. Uses [typescript](https://github.com/microsoft/TypeScript).
-
-`npm run lint` - Verify best practices and find common issues. Uses [eslint](https://github.com/eslint/eslint).
+This is a very minimal demo.
