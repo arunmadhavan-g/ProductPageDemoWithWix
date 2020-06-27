@@ -2,16 +2,88 @@ import vivoFront from "../assets/vivo-front.png";
 import vivoRight from "../assets/vivo-right.png";
 import vivoBack from "../assets/vivo-back.png";
 import vivoLeft from "../assets/vivo-left.png";
+
+import vivoFrontPurple from "../assets/vivo-front-purple.png";
+import vivoRightPurple from "../assets/vivo-right-purple.png";
+import vivoBackPurple from "../assets/vivo-back-purple.png";
+import vivoLeftPurple from "../assets/vivo-left-purple.png";
+
+
 import flashCharge from "../assets/flashCharge.png";
 import battery from "../assets/battery.png";
 import fingerprint from "../assets/fingerprint.png";
 import amoled from "../assets/amoled.png";
 import photo from "../assets/photo.png";
 
-const variantDetails = {
+
+const ColorBlueRAM6GBStorage64GB = {
     title: "Vivo Z1x (Fusion Blue, 64 GB) (6 GB RAM)",
     rating: 4,
     price: {mrp: 19990, sellingPrice: 15990},
+    currentOptions: [{
+        type: "Color",
+        value: "Blue"
+    }, {
+        type: "RAM",
+        value: "6GB"
+    }, {
+        type: "Storage",
+        value: "64GB"
+    }],
+    images: [vivoFront, vivoRight, vivoBack, vivoLeft]
+}
+const ColorPurpleRAM6GBStorage64GB = {
+    title: "Vivo Z1x (Phantom Purple, 64 GB)  (6 GB RAM)",
+    rating: 4,
+    price: {mrp: 19990, sellingPrice: 15990},
+    currentOptions: [{
+        type: "Color",
+        value: "Purple"
+    }, {
+        type: "RAM",
+        value: "6GB"
+    }, {
+        type: "Storage",
+        value: "64GB"
+    }],
+    images: [vivoFrontPurple, vivoRightPurple, vivoBackPurple, vivoLeftPurple]
+}
+const ColorPurpleRAM8GBStorage64GB = {
+    title: "Vivo Z1x (Phantom Purple, 64 GB)  (8 GB RAM)",
+    rating: 4,
+    price: {mrp: 22990, sellingPrice: 16990},
+    currentOptions: [{
+        type: "Color",
+        value: "Purple"
+    }, {
+        type: "RAM",
+        value: "8GB"
+    }, {
+        type: "Storage",
+        value: "64GB"
+    }],
+    images: [vivoFrontPurple, vivoRightPurple, vivoBackPurple, vivoLeftPurple]
+}
+const ColorPurpleRAM8GBStorage128GB = {
+    title: "Vivo Z1x (Phantom Purple, 128 GB)  (8 GB RAM)",
+    rating: 4,
+    price: {mrp: 24990, sellingPrice: 17990},
+    currentOptions: [{
+        type: "Color",
+        value: "Purple"
+    }, {
+        type: "RAM",
+        value: "8GB"
+    }, {
+        type: "Storage",
+        value: "128GB"
+    }],
+    images: [vivoFrontPurple, vivoRightPurple, vivoBackPurple, vivoLeftPurple]
+}
+const ColorBlueRAM8GBStorage64GB = {
+    title: "Vivo Z1x (Fusion Blue, 64 GB)  (8 GB RAM)",
+    rating: 4,
+    price: {mrp: 22990, sellingPrice: 16990},
     currentOptions: [{
         type: "Color",
         value: "Blue"
@@ -24,6 +96,68 @@ const variantDetails = {
     }],
     images: [vivoFront, vivoRight, vivoBack, vivoLeft]
 }
+const ColorBlueRAM8GBStorage128GB = {
+    title: "Vivo Z1x (Fusion Blue, 128 GB)  (8 GB RAM)",
+    rating: 4,
+    price: {mrp: 24990, sellingPrice: 17990},
+    currentOptions: [{
+        type: "Color",
+        value: "Blue"
+    }, {
+        type: "RAM",
+        value: "8GB"
+    }, {
+        type: "Storage",
+        value: "128GB"
+    }],
+    images: [vivoFront, vivoRight, vivoBack, vivoLeft]
+}
+
+const ColorBlueRAM6GBStorage128GB = {
+    title: "Vivo Z1x (Fusion Blue, 64 GB)  (6 GB RAM)",
+    rating: 4,
+    price: {mrp: 22490, sellingPrice: 16490},
+    currentOptions: [{
+        type: "Color",
+        value: "Blue"
+    }, {
+        type: "RAM",
+        value: "6GB"
+    }, {
+        type: "Storage",
+        value: "128GB"
+    }],
+    images: [vivoFront, vivoRight, vivoBack, vivoLeft]
+}
+
+const ColorPurpleRAM6GBStorage128GB = {
+    title: "Vivo Z1x (Phantom Purple, 64 GB)  (6 GB RAM)",
+    rating: 4,
+    price: {mrp: 22490, sellingPrice: 16490},
+    currentOptions: [{
+        type: "Color",
+        value: "Purple"
+    }, {
+        type: "RAM",
+        value: "6GB"
+    }, {
+        type: "Storage",
+        value: "128GB"
+    }],
+    images: [vivoFrontPurple, vivoRightPurple, vivoBackPurple, vivoLeftPurple]
+}
+
+
+const variantDB = {
+    ColorBlueRAM6GBStorage64GB,
+    ColorPurpleRAM6GBStorage64GB,
+    ColorPurpleRAM8GBStorage64GB,
+    ColorPurpleRAM8GBStorage128GB,
+    ColorBlueRAM8GBStorage64GB,
+    ColorBlueRAM8GBStorage128GB,
+    ColorBlueRAM6GBStorage128GB,
+    ColorPurpleRAM6GBStorage128GB
+}
 
 const productDetails = {
     breadcrumbs: ["Home", "Mobiles", "Vivo", "Vivo Z1x"],
@@ -32,7 +166,7 @@ const productDetails = {
     optionTypes: [
         {
             type: "Color",
-            options: ["Red", "Blue", "Silver", "Black"]
+            options: ["Blue", "Purple"]
         }, {
             type: "RAM",
             options: ["6GB", "8GB"]
@@ -91,5 +225,5 @@ const productDetails = {
 
 export {
     productDetails,
-    variantDetails
+    variantDB
 }
