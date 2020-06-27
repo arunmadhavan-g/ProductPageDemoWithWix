@@ -8,53 +8,37 @@ import {Delivery} from "./Delivery";
 import {Synopsis} from "./Synopsis";
 import {DetailedDescription} from "./DetailedDescription";
 import {Specification} from "./Specification";
-import vivoFront from "../assets/vivo-front.png";
-import vivoBack from "../assets/vivo-back.png";
-import vivoLeft from "../assets/vivo-left.png";
-import vivoRight from "../assets/vivo-right.png";
+import {productDetails, variantDetails} from "../data/ProductData";
 
 export interface ProductDetailsProps {
 }
 
-const optionTypes = [
-    {
-        type: "Color",
-        options: ["Red", "Blue", "Silver", "Black"]
-    }, {
-        type: "RAM",
-        options: ["6GB", "8GB"]
-    }, {
-        type: "Storage",
-        options: ["64GB", "128GB"]
-    }
-]
-
-const images = [vivoFront, vivoRight, vivoBack, vivoLeft];
+const getDeliveryStatus = (zipCode: string): boolean => zipCode === '600004';
 
 export const ProductDetails: React.FC<ProductDetailsProps> = () => (
     <>
         <Row>
             <Col span={6}>
-                <ProductImage images={images}/>
+                <ProductImage images={variantDetails.images}/>
                 <ButtonsContainer/>
             </Col>
             <Col span={6}>
                 <div style={{height: "100%"}}>
-                    <ProductContents/>
-                    <OptionTypes options={optionTypes}/>
-                    <Delivery/>
-                    <Synopsis/>
+                    <ProductContents variantDetails={variantDetails} productDetails={productDetails}/>
+                    <OptionTypes options={productDetails.optionTypes} currentOptions={variantDetails.currentOptions}/>
+                    <Delivery status={false} getStatus={getDeliveryStatus}/>
+                    <Synopsis content={productDetails.synopsis}/>
                 </div>
             </Col>
         </Row>
         <Row>
             <Col span={12}>
-                <DetailedDescription/>
+                <DetailedDescription features={productDetails.features}/>
             </Col>
         </Row>
         <Row>
             <Col span={12}>
-                <Specification/>
+                <Specification specs={productDetails.specs}/>
             </Col>
         </Row>
     </>

@@ -4,18 +4,18 @@ import {ProductTitle} from "./ProductTitle";
 import {ProductRating} from "./ProductRating";
 import {ProductPrice} from "./ProductPrice";
 import {Offers} from "./Offers";
+import {ProductDetails, VariantDetails} from "../models/Models";
 
 export interface ProductContentsProps {
+    variantDetails: VariantDetails,
+    productDetails: ProductDetails
 }
 
-const offers = ["Bank Offer10% Instant Discount with HDFC Bank Credit Cards and Credit/Debit EMI Transactions",
-    "Bank Offer10% Instant Discount with HDFC Bank Debit Card Transactions"];
-
-export const ProductContents: React.FC<ProductContentsProps> = () => (
+export const ProductContents: React.FC<ProductContentsProps> = ({variantDetails, productDetails}: ProductContentsProps) => (
     <Row>
-        <Col span={12}><ProductTitle/></Col>
-        <Col span={12}><ProductRating rating={4}/></Col>
-        <Col span={12}><ProductPrice sellingPrice={15990} mrp={19990}/></Col>
-        <Col span={12}><Offers offers={offers}/></Col>
+        <Col span={12}><ProductTitle breadcrumbs={productDetails.breadcrumbs} title={variantDetails.title}/></Col>
+        <Col span={12}><ProductRating rating={variantDetails.rating}/></Col>
+        <Col span={12}><ProductPrice price={variantDetails.price}/></Col>
+        <Col span={12}><Offers offers={productDetails.offers}/></Col>
     </Row>
 )
