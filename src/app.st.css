@@ -1,12 +1,15 @@
-.root {}
-
-:global(html) {
-    background-color: rgb(37, 37, 38);
-    color: white;
+.root {
 }
 
 .header {
     -st-extends: Header;
     margin-top: 10em;
     text-align: center;
+}
+
+
+.bodyContainer {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px
 }

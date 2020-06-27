@@ -1,22 +1,26 @@
-import React from "react"
+import React, {useState} from "react"
 import {Col, Image, Row} from "wix-style-react";
-import vivoFront from "../assets/vivo-front.png";
 
 import {ImageThumbs} from "./ImageThumbs";
 
 export interface ProductImageProps {
+    images: string[]
 }
 
-export const ProductImage: React.FC<ProductImageProps> = () => (
-    <Row>
-        <Col span={3}>
-            <ImageThumbs/>
-        </Col>
-        <Col span={8}>
-            <div style={{width: "100%", display: "flex", justifyContent: "center"}}>
-                <Image src={vivoFront} style={{width: "180px"}}/>
-            </div>
-        </Col>
-    </Row>
-)
+export const ProductImage: React.FC<ProductImageProps> = ({images}: ProductImageProps) => {
+    const [currentImage, setCurrentImage] = useState(images[0]);
+    return (
+        <Row>
+            <Col span={3}>
+                <ImageThumbs images={images} setImage={setCurrentImage}/>
+            </Col>
+            <Col span={8}>
+                <div style={{width: "100%", display: "flex", justifyContent: "center"}}>
+                    <Image src={currentImage} style={{width: "180px", height: "450px", backgroundColor: "#FFFFFF"}}
+                           fit="contain"/>
+                </div>
+            </Col>
+        </Row>
+    );
+}
 

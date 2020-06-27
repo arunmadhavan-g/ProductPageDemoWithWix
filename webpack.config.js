@@ -20,7 +20,7 @@ module.exports = {
                 ]
             },
             {
-                test: /\.scss$/,
+                test: /\.s[a|c]ss$/,
                 include: [
                     path.join(__dirname, 'node_modules/wix-animations'),
                     path.join(__dirname, 'node_modules/wix-style-react'),

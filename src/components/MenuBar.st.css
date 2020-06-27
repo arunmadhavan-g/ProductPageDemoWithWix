@@ -1,0 +1,22 @@
+.container {
+    margin: 0 50px;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    background-color: #FFFFFF;
+    height: max-content;
+    width: max-content
+}
+
+.avatarCartContainer {
+    display: flex;
+    align-items: center
+}
+
+.icon {
+    height: 30px;
+    width: 30px;
+    margin-left: 15px
+}

@@ -3,7 +3,7 @@ import {Route, Router, Switch} from 'react-router-dom'
 import {createBrowserHistory} from 'history';
 import {MenuBar} from './components/MenuBar';
 import {Col, Container, Row} from "wix-style-react";
-
+import {classes} from './app.st.css';
 import {ProductDetails} from './components/ProductDetails';
 
 export interface AppProps {
@@ -13,7 +13,7 @@ const history = createBrowserHistory();
 export const App: React.FC<AppProps> = () =>
     (
         <Router history={history}>
-            <div style={{display: "flex", justifyContent: "center", paddingTop: "20px"}}>
+            <div className={classes.bodyContainer}>
                 <Container>
                     <Row>
                         <Col>

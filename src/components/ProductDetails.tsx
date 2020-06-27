@@ -8,6 +8,10 @@ import {Delivery} from "./Delivery";
 import {Synopsis} from "./Synopsis";
 import {DetailedDescription} from "./DetailedDescription";
 import {Specification} from "./Specification";
+import vivoFront from "../assets/vivo-front.png";
+import vivoBack from "../assets/vivo-back.png";
+import vivoLeft from "../assets/vivo-left.png";
+import vivoRight from "../assets/vivo-right.png";
 
 export interface ProductDetailsProps {
 }
@@ -24,11 +28,14 @@ const optionTypes = [
         options: ["64GB", "128GB"]
     }
 ]
+
+const images = [vivoFront, vivoRight, vivoBack, vivoLeft];
+
 export const ProductDetails: React.FC<ProductDetailsProps> = () => (
     <>
         <Row>
             <Col span={6}>
-                <ProductImage/>
+                <ProductImage images={images}/>
                 <ButtonsContainer/>
             </Col>
             <Col span={6}>
