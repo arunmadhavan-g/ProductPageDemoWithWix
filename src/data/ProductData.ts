@@ -50,7 +50,7 @@ const ColorPurpleRAM6GBStorage64GB = {
 }
 const ColorPurpleRAM8GBStorage64GB = {
     title: "Vivo Z1x (Phantom Purple, 64 GB)  (8 GB RAM)",
-    rating: 4,
+    rating: 3,
     price: {mrp: 22990, sellingPrice: 16990},
     currentOptions: [{
         type: "Color",
@@ -66,7 +66,7 @@ const ColorPurpleRAM8GBStorage64GB = {
 }
 const ColorPurpleRAM8GBStorage128GB = {
     title: "Vivo Z1x (Phantom Purple, 128 GB)  (8 GB RAM)",
-    rating: 4,
+    rating: 5,
     price: {mrp: 24990, sellingPrice: 17990},
     currentOptions: [{
         type: "Color",
@@ -82,7 +82,7 @@ const ColorPurpleRAM8GBStorage128GB = {
 }
 const ColorBlueRAM8GBStorage64GB = {
     title: "Vivo Z1x (Fusion Blue, 64 GB)  (8 GB RAM)",
-    rating: 4,
+    rating: 3,
     price: {mrp: 22990, sellingPrice: 16990},
     currentOptions: [{
         type: "Color",
@@ -98,7 +98,7 @@ const ColorBlueRAM8GBStorage64GB = {
 }
 const ColorBlueRAM8GBStorage128GB = {
     title: "Vivo Z1x (Fusion Blue, 128 GB)  (8 GB RAM)",
-    rating: 4,
+    rating: 5,
     price: {mrp: 24990, sellingPrice: 17990},
     currentOptions: [{
         type: "Color",
@@ -115,7 +115,7 @@ const ColorBlueRAM8GBStorage128GB = {
 
 const ColorBlueRAM6GBStorage128GB = {
     title: "Vivo Z1x (Fusion Blue, 64 GB)  (6 GB RAM)",
-    rating: 4,
+    rating: 3,
     price: {mrp: 22490, sellingPrice: 16490},
     currentOptions: [{
         type: "Color",
