@@ -1,6 +1,6 @@
 # Product Details - Demo App using Wix components
 
-Check out the [Demo](https://arunmadhavan-g.github.io/ProductPageDemoWithWix/)
+Check out the [Demo](https://www.ajira.tech/ProductPageDemoWithWix/)
 
 This is a demo app that uses the [Wix components](https://github.com/wix/wix-style-react).
 The project also uses *Redux* for state handling
